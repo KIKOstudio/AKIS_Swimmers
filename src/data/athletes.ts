@@ -28,6 +28,9 @@ export const athletes: Athlete[] = [
     name: 'Emma Johnson',
     gender: 'female',
     grade: 11,
+    // To add a profile image, set profileImage to the image path:
+    // profileImage: '/images/emma-johnson.jpg',  // for images in public folder
+    // profileImage: 'https://example.com/photo.jpg',  // for external URLs
     medals: { gold: 5, silver: 3, bronze: 2 },
     team: 'Varsity Swim',
     specialty: ['Freestyle', 'Butterfly'],
