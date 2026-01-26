@@ -80,7 +80,7 @@ export default function AthleteProfile() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Trophy className="h-5 w-5 text-primary" />
-                  Official Meet Medals
+                  Official School Meet Medals
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -135,7 +135,7 @@ export default function AthleteProfile() {
               <CardContent>
                 <p className="text-foreground font-medium">{athlete.team}</p>
                 <p className="text-muted-foreground text-sm mt-1">
-                  Season 2024-2025
+                  Season 2025-2026
                 </p>
               </CardContent>
             </Card>

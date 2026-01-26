@@ -2,7 +2,7 @@ export interface Athlete {
   id: string;
   name: string;
   gender: 'male' | 'female';
-  grade: number;
+  grade: string;
   profileImage?: string;
   medals: {
     gold: number;
@@ -27,116 +27,55 @@ export interface Athlete {
 export const athletes: Athlete[] = [
   {
     id: '1',
-    name: 'Emma Johnson',
+    name: 'Layan Hegazi',
     gender: 'female',
-    grade: 11,
+    grade: '11GB',
     // To add a profile image, set profileImage to the image path:
-    // profileImage: '/images/emma-johnson.jpg',  // for images in public folder
+    profileImage: '/layan.png',  // for images in public folder
     // profileImage: 'https://example.com/photo.jpg',  // for external URLs
-    medals: { gold: 5, silver: 3, bronze: 2 },
+    medals: { gold: 0, silver: 0, bronze: 0 },
     team: 'Varsity Swim',
-    specialty: ['Freestyle', 'Butterfly'],
+    specialty: ['Freestyle', 'Breaststroke'],
+    swimCloudUrl: 'https://www.swimcloud.com/swimmer/2522195/',
     results: [
-      { event: '100m Freestyle', time: '54.32', place: '1st', meet: 'State Championships', date: 'Dec 15, 2024', isPB: true },
-      { event: '50m Butterfly', time: '28.45', place: '2nd', meet: 'Regional Finals', date: 'Nov 20, 2024', isPB: true },
-      { event: '200m Freestyle', time: '2:01.89', place: '1st', meet: 'District Meet', date: 'Oct 10, 2024' },
-      { event: '100m Butterfly', time: '1:02.34', place: '3rd', meet: 'Invitational', date: 'Sep 28, 2024' },
+      { event: '50 Free SCM', time: '30.33', place: '4th', meet: 'SC - 1ST Competitive Swimming', date: 'Nov 4, 2023', isPB: true },
+      { event: '100 Breast SCM', time: '	1:30.87', place: '7th', meet: 'SC - 3rd Competitive Championship', date: 'May 10, 2025', isPB: true },
+      { event: '50 Back LCM', time: '	38.18', place: '9th', meet: 'UAETSS Competition', date: 'Nov 15–16, 2025' },
     ],
+    mediaPhotos: ['/layanmed.png'],
   },
   {
     id: '2',
-    name: 'Michael Chen',
+    name: 'Ziad Ghettas',
     gender: 'male',
-    grade: 12,
-    medals: { gold: 8, silver: 4, bronze: 1 },
+    grade: '10BA',
+    medals: { gold: 2, silver: 0, bronze: 1 },
     team: 'Varsity Swim',
-    specialty: ['Backstroke', 'IM'],
+    specialty: ['Freestyle', 'Fly', 'Breaststroke'],
+    profileImage: '/ziad.png',  // for images in public folder
+    swimCloudUrl: 'https://www.swimcloud.com/swimmer/2800380/',
     results: [
-      { event: '200m Backstroke', time: '1:58.12', place: '1st', meet: 'State Championships', date: 'Dec 15, 2024', isPB: true },
-      { event: '400m IM', time: '4:22.67', place: '1st', meet: 'Regional Finals', date: 'Nov 20, 2024' },
-      { event: '100m Backstroke', time: '55.89', place: '2nd', meet: 'District Meet', date: 'Oct 10, 2024', isPB: true },
+      { event: '800 Free LCM', time: '9:50.51', place: '12th', meet: 'Abu Dhabi International Championship', date: 'Dec 12–14, 2025', isPB: true },
+      { event: '100 Free SCM', time: '59.27', place: 'N/A', meet: 'SSS Club Championships', date: 'Jan 24, 2026', isPB: true},
+      { event: '200 Fly LCM', time: '	2:52.98', place: '5th', meet: 'Abu Dhabi International Championship', date: 'Dec 12–14, 2025' },
     ],
+    mediaPhotos: ['/ziadmed1.png', '/ziadmed2.png', '/ziadmed3.png'],
   },
   {
     id: '3',
-    name: 'Sofia Rodriguez',
-    gender: 'female',
-    grade: 10,
-    medals: { gold: 2, silver: 5, bronze: 3 },
-    team: 'JV Swim',
-    specialty: ['Breaststroke'],
-    results: [
-      { event: '100m Breaststroke', time: '1:12.45', place: '2nd', meet: 'JV Championships', date: 'Dec 10, 2024', isPB: true },
-      { event: '50m Breaststroke', time: '34.22', place: '1st', meet: 'Dual Meet', date: 'Nov 15, 2024' },
-      { event: '200m Breaststroke', time: '2:42.89', place: '3rd', meet: 'Invitational', date: 'Oct 22, 2024' },
-    ],
-  },
-  {
-    id: '4',
-    name: 'James Williams',
+    name: 'Ahmed Tawfik',
     gender: 'male',
-    grade: 11,
-    medals: { gold: 4, silver: 2, bronze: 4 },
+    grade: '7BC',
+    medals: { gold: 2, silver: 1, bronze: 0 },
     team: 'Varsity Swim',
-    specialty: ['Freestyle', 'Sprint'],
+    specialty: ['Backstroke'],
+    profileImage: '/tawfeeq.png',  // for images in public folder
+    swimCloudUrl: 'https://www.swimcloud.com/swimmer/3148642/',
     results: [
-      { event: '50m Freestyle', time: '23.45', place: '1st', meet: 'Sprinter Classic', date: 'Dec 8, 2024', isPB: true },
-      { event: '100m Freestyle', time: '50.12', place: '2nd', meet: 'State Championships', date: 'Dec 15, 2024' },
-      { event: '200m Freestyle', time: '1:52.34', place: '3rd', meet: 'Regional Finals', date: 'Nov 20, 2024' },
+      { event: '50 Free LCM', time: '28.76', place: '5th', meet: 'Abu Dhabi International Championship', date: 'Dec 12–14, 2025', isPB: true },
+      { event: '100 Back LCM', time: '	1:14.44', place: '6th', meet: 'Abu Dhabi International Championship', date: 'Dec 12–14, 2025', isPB: true },
+      { event: '200 Back LCM', time: '2:47.30', place: '4th', meet: 'SC - Open Swimming Championship', date: 'Jun 14–15, 2025' },
     ],
-  },
-  {
-    id: '5',
-    name: 'Olivia Taylor',
-    gender: 'female',
-    grade: 12,
-    medals: { gold: 6, silver: 4, bronze: 2 },
-    team: 'Varsity Swim',
-    specialty: ['IM', 'Distance'],
-    results: [
-      { event: '400m IM', time: '4:45.23', place: '1st', meet: 'State Championships', date: 'Dec 15, 2024', isPB: true },
-      { event: '800m Freestyle', time: '8:42.56', place: '1st', meet: 'Distance Invitational', date: 'Nov 30, 2024' },
-      { event: '200m IM', time: '2:15.67', place: '2nd', meet: 'Regional Finals', date: 'Nov 20, 2024', isPB: true },
-    ],
-  },
-  {
-    id: '6',
-    name: 'David Park',
-    gender: 'male',
-    grade: 9,
-    medals: { gold: 1, silver: 2, bronze: 3 },
-    team: 'JV Swim',
-    specialty: ['Butterfly'],
-    results: [
-      { event: '100m Butterfly', time: '1:05.78', place: '2nd', meet: 'JV Championships', date: 'Dec 10, 2024', isPB: true },
-      { event: '50m Butterfly', time: '29.34', place: '1st', meet: 'Freshman Meet', date: 'Nov 5, 2024' },
-    ],
-  },
-  {
-    id: '7',
-    name: 'Ava Martinez',
-    gender: 'female',
-    grade: 9,
-    medals: { gold: 0, silver: 3, bronze: 2 },
-    team: 'JV Swim',
-    specialty: ['Freestyle'],
-    results: [
-      { event: '200m Freestyle', time: '2:12.45', place: '2nd', meet: 'JV Championships', date: 'Dec 10, 2024', isPB: true },
-      { event: '100m Freestyle', time: '1:02.89', place: '3rd', meet: 'Freshman Meet', date: 'Nov 5, 2024' },
-    ],
-  },
-  {
-    id: '8',
-    name: 'Ethan Brown',
-    gender: 'male',
-    grade: 10,
-    medals: { gold: 3, silver: 1, bronze: 2 },
-    team: 'Varsity Swim',
-    specialty: ['Breaststroke', 'IM'],
-    results: [
-      { event: '100m Breaststroke', time: '1:05.23', place: '1st', meet: 'District Meet', date: 'Oct 10, 2024', isPB: true },
-      { event: '200m IM', time: '2:08.45', place: '2nd', meet: 'Invitational', date: 'Sep 28, 2024' },
-      { event: '50m Breaststroke', time: '30.12', place: '1st', meet: 'Dual Meet', date: 'Nov 15, 2024' },
-    ],
+      mediaPhotos: ['/tawfeeqmed1.png', '/tawfeeqmed2.png'],
   },
 ];
