@@ -1,11 +1,12 @@
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Trophy, Calendar, Users } from 'lucide-react';
+import { ArrowLeft, Trophy, Calendar, Users, Image, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { MedalDisplay } from '@/components/MedalDisplay';
 import { ResultsTable } from '@/components/ResultsTable';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { athletes } from '@/data/athletes';
 
 export default function AthleteProfile() {
@@ -139,28 +140,64 @@ export default function AthleteProfile() {
               </CardContent>
             </Card>
 
-            {/* Evidence Photo Card */}
+            {/* Media Section */}
             <Card className="shadow-card animate-fade-in" style={{ animationDelay: '250ms' }}>
               <CardHeader>
-                <CardTitle className="text-lg">Evidence</CardTitle>
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <Image className="h-5 w-5 text-primary" />
+                  Media
+                </CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="aspect-[4/3] rounded-lg bg-muted flex items-center justify-center overflow-hidden">
-                  {athlete.evidencePhoto ? (
-                    <img
-                      src={athlete.evidencePhoto}
-                      alt={`${athlete.name} swimming`}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
+              <CardContent className="space-y-4">
+                {/* Photo Gallery */}
+                {athlete.mediaPhotos && athlete.mediaPhotos.length > 0 ? (
+                  <div className="px-8">
+                    <Carousel className="w-full">
+                      <CarouselContent>
+                        {athlete.mediaPhotos.map((photo, index) => (
+                          <CarouselItem key={index}>
+                            <div className="aspect-[4/3] rounded-lg overflow-hidden bg-muted">
+                              <img
+                                src={photo}
+                                alt={`${athlete.name} photo ${index + 1}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      <CarouselPrevious />
+                      <CarouselNext />
+                    </Carousel>
+                  </div>
+                ) : (
+                  <div className="aspect-[4/3] rounded-lg bg-muted flex items-center justify-center">
                     <div className="text-center p-4">
                       <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
-                        <Trophy className="w-8 h-8 text-primary/50" />
+                        <Image className="w-8 h-8 text-primary/50" />
                       </div>
                       <p className="text-muted-foreground text-sm">
-                        No photo uploaded yet
+                        No photos uploaded yet
                       </p>
                     </div>
+                  </div>
+                )}
+
+                {/* SwimCloud Link */}
+                <div className="pt-2 border-t">
+                  <p className="text-sm font-medium text-muted-foreground mb-2">Evidence</p>
+                  {athlete.swimCloudUrl ? (
+                    <a
+                      href={athlete.swimCloudUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:underline"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      View on SwimCloud
+                    </a>
+                  ) : (
+                    <p className="text-muted-foreground text-sm">No SwimCloud link added</p>
                   )}
                 </div>
               </CardContent>
