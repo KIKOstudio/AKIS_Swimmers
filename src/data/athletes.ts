@@ -19,7 +19,9 @@ export interface Athlete {
     date: string;
     isPB?: boolean;
   }[];
-  evidencePhoto?: string;
+  // Media section
+  mediaPhotos?: string[]; // Array of photo URLs for the media gallery
+  swimCloudUrl?: string; // Link to SwimCloud profile
 }
 
 export const athletes: Athlete[] = [
