@@ -55,8 +55,8 @@ export const athletes: Athlete[] = [
     profileImage: '/ziad.png',  // for images in public folder
     swimCloudUrl: 'https://www.swimcloud.com/swimmer/2800380/',
     results: [
-      { event: '800 Free LCM', time: '9:50.51', place: '12th', meet: 'Abu Dhabi International Championship', date: 'Dec 12–14, 2025', isPB: true },
-      { event: '100 Free SCM', time: '59.27', place: 'N/A', meet: 'SSS Club Championships', date: 'Jan 24, 2026', isPB: true},
+      { event: '800 Free LCM', time: '9:44.79', place: '12th', meet: 'Abu Dhabi International Championship', date: 'Dec 12–14, 2025', isPB: true },
+      { event: '100 Free SCM', time: '59.27', place: '4th', meet: 'SSS Club Championships', date: 'Jan 24, 2026', isPB: true},
       { event: '200 Fly LCM', time: '	2:52.98', place: '5th', meet: 'Abu Dhabi International Championship', date: 'Dec 12–14, 2025' },
     ],
     mediaPhotos: ['/ziadmed1.png', '/ziadmed2.png', '/ziadmed3.png'],
@@ -77,5 +77,22 @@ export const athletes: Athlete[] = [
       { event: '200 Back LCM', time: '2:47.30', place: '4th', meet: 'SC - Open Swimming Championship', date: 'Jun 14–15, 2025' },
     ],
       mediaPhotos: ['/tawfeeqmed1.png', '/tawfeeqmed2.png'],
+  },
+  {
+    id: '4',
+    name: 'Yassin Elsawy',
+    gender: 'male',
+    grade: '10BE',
+    medals: { gold: 0, silver: 2, bronze: 0 },
+    team: 'Varsity Swim',
+    specialty: ['Freestyle', 'Fly'],
+    profileImage: '/elsawy.png',  // for images in public folder
+    swimCloudUrl: 'https://www.swimcloud.com/swimmer/3188177/',
+    results: [
+      { event: '100 Fly LCM', time: '1:02.73', place: '2nd', meet: 'Dassa Seconday Individual Championships 2026', date: 'Jan 26, 2026' },
+      { event: '200 IM LCM', time: '	2:24.44', place: '1st', meet: 'Abu Dhabi International Swimming Championship', date: 'Dec 13, 2025', isPB: true },
+      { event: '50 Free LCM', time: '27.27', place: '14th', meet: 'Hamilton Club Championships', date: 'Jun 16, 2026' },
+    ],
+      mediaPhotos: ['/elsawymed1.png', '/elsawymed2.png', '/elsawymed3.png', '/elsawymed4.png'],
   },
 ];
